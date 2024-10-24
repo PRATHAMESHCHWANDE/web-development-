@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+</head>
+<style>
+    *{
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+    body{
+        background: linear-gradient(120deg,#151722,#3d444b);
+    }
+    .container{
+        /* background: linear-gradient(120deg,#9dc32e,#a31f8d); */
+        position: absolute;
+        border: 2px solid white;
+        border-radius: 10px;
+        display: inline-block;
+        margin: -12px 700px;
+        padding: 50px 30px;
+        box-shadow: -5px 5px 36px 4px grey;
+        
+    }
+
+    /* .container:hover{
+        transform: skewY(2deg);
+    } */
+
+    .formgrp input{
+        text-align: center;
+        border-radius: 4px;
+        margin: 20px 15px;
+        padding: 10px 14px;
+        width: 233px;
+    }
+
+    .heading{
+        text-align: center;
+    }
+
+    .info {
+        border: 2px solid white;
+        color: white;
+        margin: -43px 53px;
+        padding: 44px;
+        display: inline-grid;
+        box-shadow: -5px 5px 36px 4px grey;
+
+    }
+
+    .address h3{
+        padding: 0px 0px;
+        margin: 0px 0px;
+    }
+    .mail h3{
+        padding: 0px 0px;
+        margin: 0px 0px;
+    }
+    .call h3{
+        padding: 0px 0px;
+        margin: 0px 0px;
+    }
+    .time h3{
+        padding: 0px 0px;
+        margin: 0px 0px;
+    }
+    
+    #frmhead{
+        color: white;
+        display: inline-block;
+        margin: 7px 84px;
+        padding: 0px 0px;
+    }
+
+    #cnt{
+        margin: 40px 432px;
+        text-align: right;
+        font-size: 67px;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        color: white;
+    }
+
+    #txt{
+            color: white;
+    }
+
+    footer{
+            padding: 7px;
+            margin: 83px 0px;
+            background-color: rgb(30, 30, 30);
+            display: block;
+        }
+
+    footer p{
+            color: white;
+            text-align: center;
+        }
+        #Message{
+           text-align: center;
+          
+        }
+        #Message textarea{
+            
+            border-radius: 5px;
+            padding: 0px 7px;
+            margin: 28px 0px;
+            text-align: center;
+        }
+
+        #submit{
+            text-align: center;
+        }
+
+
+</style>
+<body>
+    <div class="contact">
+        <h1 id="cnt">Contact Us</h1>
+
+    </div>
+    <div class="container">
+        <h2 id="frmhead">Message us</h2>
+
+    
+
+        <form action="" name="myForm" onsubmit="return validate()">
+            
+            <div id="Name" class="formgrp">
+                <input type="text" name="name"  placeholder="Name">
+            </div>
+
+            <div id="contactno" class="formgrp">
+                <input type="text" name="contact"  placeholder="Contact no.">
+            </div>
+            
+            <div id="Email" class="formgrp">
+                <input type="email" name="email" placeholder="Email">
+            </div>
+
+            <div id="Message" class="formgrp">
+                <textarea name="myText" cols="35" rows="2" placeholder="Message"></textarea>
+            </div>
+            <div class="submit" id="submit">
+                <input type="submit" name="submit" value="submit">
+            </div>
+
+
+            
+            <!-- <button class="btn">send</button> -->
+
+            
+        </form>
+
+    </div>
+
+    <div class="info">
+
+        <div class="address">
+            <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+            <span class="material-symbols-outlined">
+                location_on
+            </span>
+            <h3>address</h3>
+            <p>
+                Tripod Fitnesshub<br>
+                 Crystal Complex,Near Khadi Machine Chowk<br>
+                 Opp.Rajthat, Pune,411048
+            </p>
+
+            
+        </div>
+
+        <div class="mail">
+            <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+            <span class="material-symbols-outlined">
+                Mail
+            </span>
+            <h3>Mail</h3>
+            <p>ojaskhawas06@gmail.com</p>
+            
+            
+        </div>
+
+        <div class="call">
+            <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+            <span class="material-symbols-outlined">
+                Phone
+            </span>
+            <h3>Phone</h3>
+            <p>+91 8767729487</p>
+        </div>
+
+        <div class="time">
+            <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+            <span class="material-symbols-outlined">
+                Schedule
+            </span>
+            <h3>Schedule</h3>
+            <p>Mon-Sat 6:00am to 9:00pm</p>
+        </div>
+
+    </div>
+
+    <footer>
+        <p>copyright @2023 All rights reserved by fitnesshub.in</p>
+    </footer>
+    
+
+    <script>
+        function validate(){
+        var name=document.myForm.name.value;
+        var contact=document.myForm.contact.value;
+        var email=document.myForm.email.value;
+        
+        
+
+        if(name==null||name==""){
+            alert('Name Should not be empty');
+            return false;
+        }
+        if(email==null||email==""){
+            alert('Email Should not be empty');
+            return false;
+        }
+        
+        if(contact==null||contact==""){
+            alert('Please Enter your contact no');
+            return false;
+        }
+        else if(contact.length<10){
+            alert('Please Enter valid contact no');
+            return false;
+        }
+        else if(isNaN(contact)){
+            alert('Contact Number must be numeric');
+            return false;
+        }
+
+        
+        
+    
+        }
+    </script>
+    </body>
+</html>

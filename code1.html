@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fitness Hub</title>
+</head>
+
+<style>
+    
+    body{
+        margin: 0px;
+        padding: 0px;
+        background-image: url('img/bgimg3.jpg');
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: 100% 100%;
+    }
+
+    .left{
+        position: absolute;
+        left: 34px;
+        top: 18px;
+        color: antiquewhite;
+        border: 2px solid white;
+        display: inline-block;
+    }
+    
+    .mid{
+        display: block;
+        margin: 21px 365px;
+        padding: 17px;
+        /* width: 33%; */
+        /* margin: 18px auto; */
+        color: antiquewhite;
+        /* border: 2px solid white; */
+        /* display: inline-block; */
+        
+    }
+    
+    .right{
+        position: absolute;
+        right: 34px;
+        top: 18px;
+        color: antiquewhite;
+        /* border: 2px solid white; */
+        display: inline-block;
+    }
+
+    .navbar{
+        display: inline-block;
+        padding: 0px 4px;
+        margin: 2px 20px;
+    }
+
+    .navbar li{
+        display: inline-block;
+        font-size: 18px;
+    }
+
+    .navbar li a{
+        font-size: larger;
+        color: white;
+        display: inline-block;
+        text-decoration: none;
+        padding: 0px 23px;
+        font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+
+    .navbar li a:hover{
+        text-decoration: underline;
+    }
+
+    .left img{
+        width: 106px;
+        filter: invert(86%);
+    }
+
+    .left div{
+        text-align: center;
+        font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+
+    .btn{
+        
+        background-color: rgb(30, 29, 29);
+        color: white;
+        font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        margin: 0px 9px;
+        padding: 3px 4px;
+        border: 2px solid white;
+        border-radius: 10px;
+        cursor: pointer;
+    }
+    .btn:hover{
+        background-color: grey;
+        border: 2px solid white;
+    }
+
+    .container{
+        border: 2px solid white;
+        margin: 200px 49px;
+        padding: 7px;
+        width: 30%;
+        border-radius: 34px;
+        /* background: linear-gradient(120deg,#2980b9,#8e44ad); */
+    }
+    .container h1{
+        color: aliceblue;
+        text-align: center;
+    }
+
+    .container button{
+        display: block;
+        /* width: 33%; */
+        margin: 12px auto;
+    }
+
+    .formgrp input{
+        text-align: center;
+        display: block;
+        width: 234px;
+        padding: 6px;
+        border: 2px solid black;
+        margin: 3px auto;
+        border-radius: 10px;
+    }
+    .formgrp a{
+        text-align: center;
+        display: block;
+        padding: 6px;
+        margin: 3px auto;
+        color: white;
+      
+    }
+    #home{
+        text-decoration-line: underline; 
+    }
+
+    
+</style> 
+<body>
+      <header class="header">
+
+        <!-- left box for logo -->
+        <div class="left">
+            <img src="img/gym_logo.png" alt="">
+            <div>Fitness Hub</div>
+        </div>
+
+        <!-- mid box for navbar -->
+        <div class="mid">
+            
+            <ul class="navbar">
+                <li><a id="home" href="code1.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="#">Fitness</a></li>
+                <li><a href="ContactUS.html">Contact us</a></li>
+
+                
+            </ul>
+        </div>
+
+        <!-- Right box for buttons -->
+        <div class="right">
+            <button class="btn">Sign up</button>
+            <button class="btn">Membership</button>
+        </div>
+
+        <!-- For creating login page -->
+        <div class="container">
+            <h1>Login!!!</h1>
+            <form action="">
+
+                <div class="formgrp">
+                    <input type="text" placeholder="Username">
+                </div>
+
+                <div class="formgrp">
+                    <input type="text" placeholder="Password">
+                </div>
+
+                <div class="formgrp">
+                    <a href="#">Forgot Password?</a>
+                </div>
+
+                <div class="formgrp">
+                    <a href="#"> Not registerd? Create an account</a>
+                </div>
+                                
+                <button class="btn">Sign in</button>
+
+            </form>
+        </div>
+
+        
+
+      </header>
+
+</body>
+</html>

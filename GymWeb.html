@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fitness Hub</title>
+</head>
+
+<style>
+    body {
+        margin: 0px;
+        padding: 0px;
+        background-image: url('img/bgimg3.jpg');
+        background-repeat: no-repeat;
+        background-attachment: fixed; 
+        background-size: 100% 100%; 
+    }
+
+    .left {
+        position: absolute;
+        left: 34px;
+        top: 18px;
+        color: antiquewhite;
+        border: 2px solid white;
+        display: inline-block;
+    }
+
+    .mid {
+        display: block;
+        margin: 21px 365px;
+        padding: 17px;
+        /* width: 33%; */
+        /* margin: 18px auto; */
+        color: antiquewhite;
+        /* border: 2px solid white; */
+        /* display: inline-block; */
+
+    }
+
+    .right {
+        position: absolute;
+        right: 34px;
+        top: 18px;
+        color: antiquewhite;
+        /* border: 2px solid white; */
+        display: inline-block;
+    }
+
+    .navbar {
+        display: inline-block;
+        padding: 0px 4px;
+        margin: 2px 20px;
+    }
+
+    .navbar li {
+        display: inline-block;
+        font-size: 18px;
+    }
+
+    .navbar li a {
+        font-size: 18px;
+        color: white;
+        display: inline-block;
+        text-align: center;
+        text-decoration: none;
+        padding: 3px 23px;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+
+    .navbar li a:hover {
+        text-decoration: underline;
+    }
+
+    .left img {
+        width: 106px;
+        filter: invert(86%);
+    }
+
+    .left div {
+        text-align: center;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+
+    .btn {
+
+        background-color: rgb(30, 29, 29);
+        color: white;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        margin: 0px 9px;
+        padding: 3px 4px;
+        border: 2px solid white;
+        border-radius: 10px;
+        cursor: pointer;
+    }
+
+    .btn:hover {
+        background-color: grey;
+        border: 2px solid white;
+    }
+
+    .container {
+        border: 2px solid white;
+        margin: 150px 88px;
+        padding: 34px;
+        /* width: 30%; */
+        border-radius: 34px;
+        /* background: linear-gradient(120deg,#2980b9,#8e44ad); */
+        display: inline-grid;
+    }
+
+    .container h1 {
+        color: aliceblue;
+        text-align: center;
+    }
+
+    .container button {
+        display: block;
+        /* width: 33%; */
+        margin: 18px;
+    }
+
+    .formgrp input {
+        text-align: center;
+        display: block;
+        
+        padding: 6px;
+        border: 2px solid black;
+        margin: 3px auto;
+        border-radius: 10px;
+    }
+
+    .formgrp a {
+        text-align: center;
+        display: block;
+        padding: 6px;
+        margin: 3px auto;
+        color: white;
+
+    }
+
+    #home {
+        text-decoration-line: underline;
+    }
+
+    #submit input{      
+        text-align: center;
+    }
+
+    #submit{
+        margin: 0px 0px;
+        padding: 0px 0px;
+        text-align: center;
+        
+    }
+</style>
+
+<body>
+    <header class="header">
+
+        <!-- left box for logo -->
+        <div class="left">
+            <img src="img/gym_logo.png" alt="">
+            <div>Fitness Hub</div>
+        </div>
+
+        <!-- mid box for navbar -->
+        <div class="mid">
+
+            <ul class="navbar">
+                <li><a id="home" href="GymWeb.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="fitness.html">Fitness</a></li>
+                <li><a href="ContactUS.html">Contact</a></li>
+            </ul>
+        </div>
+
+        <!-- Right box for buttons -->
+        <div class="right">
+            <button class="btn" onclick="signinFunc()">Sign up</button> 
+            <button class="btn" onclick="membershipFunc()">Membership</button>
+        </div>
+
+        <!-- For creating login page -->
+        <div class="container">
+            <h1>Login!!!</h1>
+            <form action="" name="myForm" onsubmit="return validate()">
+
+                <div class="formgrp">
+                    <input type="text" name="Username" placeholder="Username">
+                </div>
+
+                <div class="formgrp">
+                    <input type="password" name="Password" placeholder="Password">
+                </div>
+
+                <ul class="navbar">
+                    <li><a href="forgotpass.html">Forgot Password</a></li>
+                    <br><li><a href="createaccount.html">Not registerd? Create an account</a></li>
+                </ul>
+                <!-- <div class="formgrp">
+                    <a href="#">Forgot Password?</a>
+                </div>
+                
+                <div class="formgrp">
+                    <a href="#"> Not registerd? Create an account</a>
+                </div> -->
+                
+                <div class="submit" id="submit">
+                    <input type="submit" name="submit" value="login">
+                </div>
+                <!-- <button class="btn">Sign in</button> -->
+
+            </form>
+        </div>
+
+
+
+    </header>
+    <script>
+
+        function signinFunc(){
+            window.open("signup.html");
+        }
+        function membershipFunc(){
+            window.open("membership.html");
+        }
+        function createaccFunc(){
+            window.open("createaccount.html");
+        }
+        function validate(){
+            var Username=document.myForm.Username.value;
+            var Password=document.myForm.Password.value;
+            if(Username==null||Username==""){
+                alert('Username Should not be empty');
+                return false;
+            }
+        
+            if(Password==null||Password==""){
+                alert('Password Should not be empty');
+                return false;
+             }
+            else if(Password.length<9){
+                alert('Password must contain atleast 8 characters');
+                return false;
+            }
+        }
+    </script>
+</body>
+
+</html>
